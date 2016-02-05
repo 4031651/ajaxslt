@@ -1,0 +1,7 @@
+AJAXSLT is an implementation of XSLT in JavaScript. Because XSLT uses XPath, it is also an implementation of XPath that can be used independently of XSLT. This implementation has the advantange that it makes XSLT uniformly available on more browsers than natively provide it, and that it can be extended to yet more browsers if necessary.
+
+AJAXSLT is interesting for developers who strive aggressively for cross browser compatibility of their advanced web applications.
+
+This implementation of XSLT operates at the DOM level on its input documents. It internally uses a DOM implementation to create the output document, but usually returns the output document as text stream. The DOM to construct the output document can be supplied by the application, or else an internal minimal DOM implementation is used. This DOM comes with a minimal XML parser that can be used to generate a suitable DOM representation of the input documents if they are present as text.
+
+**NOTE(mesch)** The world of browser and web applications has moved on since this library was implemented in 2005. Many more browsers now implement XSLT and XPath natively, and, more importantly, fewer web applications use XML as their transfer data format, and moved on to the more appropriate and pragmatic JSON. A simpler more flexible way to bind data to HTML on the browser side for display in web applications is [google-jstemplate](http://code.google.com/p/google-jstemplate).
